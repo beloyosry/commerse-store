@@ -4,77 +4,99 @@ var MiniCssExtractPlugin = require("mini-css-extract-plugin");
 var OptimizeCssAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 
 module.exports = {
-  entry: {
-    app: "./src/index.js",
-  },
-
-  output: {
-    path: path.join(__dirname, "/dist"),
-    publicPath: "/",
-    filename: "main.js",
-  },
-
-  mode: "development",
-
-  devServer: {
-    static: {
-      directory: path.join(__dirname, "build"),
+    entry: {
+        app: "./src/index.js",
     },
-    port: 9000,
-    devMiddleware: {
-      writeToDisk: true, // لانتاج مجلد build
+
+    output: {
+        path: path.join(__dirname, "/dist"),
+        publicPath: "/",
+        filename: "main.js",
     },
-    hot: false, //تساعد في التحديث التلقائي
-    liveReload: true, //تساعد في التحديث التلقائي
-    open: true, // لفتح المشروع مباشرة بعد تنفيذ الأمر
-  },
 
-  module: {
-    rules: [
-      {
-        test: /\.html$/,
-        use: [
-          {
-            loader: "html-loader",
-            // option: {
-            //  minimize: true,
-            // },
-          },
-        ],
-      },
-      {
-        test: /\.css$/,
-        use: [
-          {
-            loader: MiniCssExtractPlugin.loader,
-          },
-          "css-loader",
-        ],
-      },
-      {
-        test: /\.(png|svg|jpe?g|gif)$/,
+    mode: "development",
+    devServer: {
+        static: {
+            directory: path.join(__dirname, "build"),
+        },
+        port: 9000,
+        devMiddleware: {
+            writeToDisk: true, // لانتاج مجلد build
+        },
+        hot: false, //تساعد في التحديث التلقائي
+        liveReload: true, //تساعد في التحديث التلقائي
+        open: true, // لفتح المشروع مباشرة بعد تنفيذ الأمر
+    },
 
-        use: [
-          {
-            loader: "file-loader",
-
-            options: {
-              name: "[name].[ext]",
-
-              outputPath: "images",
+    module: {
+        rules: [
+            {
+                test: /\.html$/,
+                use: [
+                    {
+                        loader: "html-loader",
+                        // option: {
+                        //  minimize: true,
+                        // },
+                    },
+                ],
             },
-          },
-        ],
-      },
-    ],
-  },
+            {
+                test: /\.css$/,
+                use: [
+                    {
+                        loader: MiniCssExtractPlugin.loader,
+                        options: {
+                            publicPath: "../",
+                        },
+                    },
+                    "css-loader",
+                ],
+            },
+            {
+                test: /\.(png|svg|jpe?g|gif)$/,
 
-  plugins: [
-    new HtmlWebpackPlugin({
-      filename: "index.html",
-      template: "./src/index.html",
-    }),
-    new MiniCssExtractPlugin({ filename: "css/style.css" }),
-    new OptimizeCssAssetsPlugin({}),
-  ],
+                use: [
+                    {
+                        loader: "file-loader",
+
+                        options: {
+                            name: "[name].[ext]",
+
+                            outputPath: "images",
+                        },
+                    },
+                ],
+            },
+            {
+                test: /\.(svg|eot|woff|woff2|ttf)$/,
+                use: [
+                    {
+                        loader: "file-loader",
+                        options: {
+                            name: "[name].[ext]",
+                            outputPath: "fonts",
+                            esModule: false,
+                        },
+                    },
+                ],
+            },
+            {
+                test: require.resolve("jquery"),
+                loader: "expose-loader",
+                options: {
+                    exposes: ["$", "jQuery"],
+                },
+            },
+        ],
+    },
+
+    plugins: [
+        new HtmlWebpackPlugin({
+            filename: "index.html",
+            template: "./src/index.html",
+        }),
+        new MiniCssExtractPlugin({ filename: "css/style.css" }),
+        new OptimizeCssAssetsPlugin({}),
+    ],
 };
