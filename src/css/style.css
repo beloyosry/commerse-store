@@ -288,3 +288,96 @@ h3.custom-heading {
     margin-bottom: 25px;
 }
 /* End Store Featured */
+
+/* Start Most Sold */
+.custom-thumbnail {
+    border: 2px solid #eef0ea;
+    padding: 8px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+.custom-thumbnail:hover {
+    border-color: #53ccd7;
+}
+.custom-thumbnail h4 {
+    font-size: 18px;
+    padding-top: 10px;
+}
+.custom-thumbnail .card-body {
+    padding: 9px;
+}
+.custom-thumbnail .price {
+    padding-top: 10px;
+}
+.price {
+    color: #53ccd7;
+}
+.rating {
+    color: #c2c2c2;
+}
+.rating .active {
+    color: #f3af41;
+}
+.custom-thumbnail .overlay {
+    position: absolute;
+    background-color: rgba(83, 204, 215, 0.5);
+    height: 250px;
+    width: calc(100%-16px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+}
+.overlay:hover {
+    opacity: 1;
+}
+.custom-thumbnail .add-to-cart-btn {
+    background-color: #fff;
+    color: #19becd;
+    font-weight: bold;
+}
+.custom-thumbnail .add-to-cart-btn:hover,
+.custom-thumbnail .add-to-cart-btn:active,
+.custom-thumbnail .add-to-cart-btn:focus,
+.custom-thumbnail .add-to-cart-btn:active:focus,
+.custom-thumbnail .add-to-cart-btn:active:hover {
+    color: #000;
+}
+
+.custom-thumbnail .sale {
+    padding: 5px 10px;
+    position: absolute;
+    left: 16px;
+    top: 14px;
+    direction: ltr;
+}
+.custom-thumbnail .sale::before {
+    content: "-";
+}
+.custom-carousel-indicators > li {
+    height: 13px;
+    width: 13px;
+    margin-right: 2px;
+    background-color: #dbdbdb;
+}
+.custom-carousel-indicators > li.active {
+    background-color: #565656;
+}
+#carousel-most-sold .carousel-indicators {
+    position: static;
+}
+.custom-thumbnail img{
+    height: 250px;
+    width: 100%;
+    max-width: 250px;
+    margin: 0 auto;
+    display: block;
+}
+
+/* End Most Sold */
