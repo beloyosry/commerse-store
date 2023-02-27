@@ -5,9 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>متجر عربي | قميص فت بيز</title>
+    <title>متجر عربي | صفحة الشراء</title>
     <script type="text/html" src="{require('index.js')}"></script>
-
 </head>
 
 <body>
@@ -101,252 +100,123 @@
         <!-- End Navbar -->
 
         <div class="container">
-
             <!-- Start Breadcrumb -->
             <div class="row">
                 <ol class="breadcrumb custom-breadcrumb">
                     <li>
                         <a href="index.html">الصفحة الرئيسية</a>
                     </li>
-                    <li>
-                        <a href="#">ملابس رجالي</a>
-                    </li>
-                    <li class="active">قميص تك فت بيز</li>
+                    <li class="active">عربة الشراء</li>
                 </ol>
             </div>
             <!-- End Breadcrumb -->
 
-            <!-- Start Product -->
-            <div class="col-12 borders-between">
-                <!-- Start Product Img -->
-                <div class="row">
-                    <div class="col-lg-5 offset-lg-1 col-md-9 offset-md-2">
-                        <div class="carousel slide" id="carousel-product-images" data-ride="carousel">
-                            <div class="carousel-inner">
-                                <div class="carousel-item active">
-                                    <img src="images/product_1.jpg" alt="صورة أمامية للقميص">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="images/product_2.jpg" alt="صورة خلفية للقميص">
-                                </div>
-                            </div>
-                            <div class="carousel-indicators custom-carousel-indicators-primary">
-                                <img data-target="#carousel-product-images" data-slide-to="0" class="active"
-                                    src="images/product_1.jpg" alt="صورة أمامية للقميص">
-                                <img data-target="#carousel-product-images" data-slide-to="1" src="images/product_2.jpg"
-                                    alt="صورة خلفية للقميص">
-                            </div>
+            <div class="borders-between">
+                <!-- Start Cart -->
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <h1 class="custom-heading">عربة الشراء</h1>
                         </div>
-                    </div>
-                    <!-- End Product Img -->
-
-                    <!-- Start Product Details -->
-                    <div class="col-lg-5">
-                        <form id="form-product-selection" class="borders-between">
-                            <!-- Start Type,Address & Price -->
-                            <div class="row">
-                                <div class="product-category block-100">
-                                    ملابس رجالي
-                                </div>
-                                <div class="clearfix block-100">
-                                    <h2 class="float-right">قميص تك فت بيز</h2>
-                                    <div class="float-left large price">35$</div>
-                                </div>
-                            </div>
-                            <!-- End Type,Address & Price -->
-
-                            <!-- Start Product Description -->
-                            <div class="row">
-                                <p class="product-description">
-                                    حقق أقصى أداء أثناء تمارينك الرياضية مع قميص تك فت بيز الرياضي الذي يمنحك الراحة
-                                    ويدعم عضلاتك.
-                                </p>
-                            </div>
-                            <!-- End Product Description -->
-
-                            <!-- Start Brand & Rating -->
-                            <div class="row barnd-and-rating">
-                                <div class="col-6">
-                                    <div class="brand">
-                                        الماركة:
-                                        <img src="images/adidas_small.png" alt="Adidas">
-                                    </div>
-                                </div>
-                                <div class="col-6">
-                                    <div class="clearfix">
-                                        <div class="rating float-left">
-                                            <i class="fas fa-star active"></i>
-                                            <i class="fas fa-star active"></i>
-                                            <i class="fas fa-star active"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- End Brand & Rating -->
-
-                            <!-- Start Size & Color -->
-                            <div class="row size-and-color">
-                                <!-- Start Size -->
-                                <div class="col-md-6">
-                                    المقاسات المتاحة:
-                                    <br>
-                                    <div class="product-option">
-                                        <label>
-                                            s
-                                            <input type="radio" name="size" value="sm">
-                                        </label>
-                                    </div>
-                                    <div class="product-option active">
-                                        <label>
-                                            M
-                                            <input type="radio" name="size" value="m" checked>
-                                        </label>
-                                    </div>
-                                    <div class="product-option">
-                                        <label>
-                                            L
-                                            <input type="radio" name="size" value="l">
-                                        </label>
-                                    </div>
-                                    <div class="product-option">
-                                        <label>
-                                            XL
-                                            <input type="radio" name="size" value="xl">
-                                        </label>
-                                    </div>
-                                </div>
-                                <!-- End Size -->
-
-                                <!-- Start Color -->
-                                <div class="col-md-6">
-                                    الألوان المتاحة:
-                                    <br>
-                                    <div class="product-option color-option" style="background-color: #ffaf32;">
-                                        <label for="orange">
-                                            &nbsp;
-                                            <input id="orange" type="radio" name="color" value="orange">
-                                        </label>
-                                    </div>
-                                    <div class="product-option color-option" style="background-color: #ff322c;">
-                                        <label for="red">
-                                            &nbsp;
-                                            <input id="red" type="radio" name="color" value="red">
-                                        </label>
-                                    </div>
-                                    <div class="product-option color-option" style="background-color: #ac3886;">
-                                        <label for="purple">
-                                            &nbsp;
-                                            <input id="purple" type="radio" name="color" value="purple">
-                                        </label>
-                                    </div>
-                                    <div class="product-option active color-option" style="background-color: #00c1ce;">
-                                        <label for="blue">
-                                            &nbsp;
-                                            <input id="blue" type="radio" name="color" value="blue" checked>
-                                        </label>
-                                    </div>
-                                </div>
-                                <!-- End Color -->
-                            </div>
-                            <!-- End Size & Color -->
-
-                            <!-- Start Product Quantity -->
-                            <div class="row product-quantity">
-                                <div class="col-12">
-                                    <div class="clearfix">
-                                        <div class="float-right label">
-                                            العدد المطلوب:
-                                        </div>
-                                        <div class="float-right">
-                                            <select class="form-control custom-form-control">
-                                                <option value="1">1</option>
-                                                <option value="2">2</option>
-                                                <option value="3">3</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- End Product Quantity -->
-
-                            <!-- Start Add To Cart -->
-                            <div class="row">
-                                <div class="col-12">
-                                    <button type="submit" class="btn custom-btn-primary2 custom-btn-with-icon">
-                                        <span>
-                                            إضافة لعربة الشراء
-                                            <i class="fas fa-cart-plus"></i>
-                                        </span>
-                                    </button>
-                                </div>
-                            </div>
-                            <!-- End Add To Cart -->
-                        </form>
-                    </div>
-                    <!-- End Product Details -->
-                </div>
-
-                <!-- Start More Description -->
-                <div class="more-description">
-                    <div class="col-12">
-                        <h3 class="custom-heading heading-with-border-bottom heading-inline">
-                            وصف المنتج
-                        </h3>
-                        <p>
-                            حقق أقصى أداء أثناء تمارينك الرياضية مع قميص تك فت بيز الرياضي الذي يمنحك الراحة ويدعم
-                            عضلاتك.</p>
-                        <ul>
-                            <li>درزات ناعمة لتخفيف الاحتكاك والتشققات</li>
-                            <li>مصنع من 88% بوليستر</li>
-                            <li>مستورد</li>
-                        </ul>
-                    </div>
-                </div>
-                <!-- End More Description -->
-
-                <!-- Start Comments -->
-                <div class="row">
-                    <div class="comments block-100">
-                        <h3 class="custom-heading heading-inline heading-with-border-bottom">التعليقات على المنتج</h3>
-                        <div class="borders-between">
-                            <div class="row">
-                                <div class="media">
-                                    <img src="images/reviewer_1.jpg" alt="محمد هاني">
-                                    <div class="media-body">
-                                        <h4 class="media-heading">محمد هاني</h4>
-                                        <div class="rating">
-                                            <span class="fas fa-star active"></span>
-                                            <span class="fas fa-star active"></span>
-                                            <span class="fas fa-star active"></span>
-                                            <span class="fas fa-star active"></span>
-                                            <span class="fas fa-star "></span>
-                                        </div>
-                                        <p>منتج جيد جدا أنصح بشرائه مصنوع من أقمشة عالية الجودة</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="media">
-                                    <img src="images/reviewer_2.jpg" alt="منى محمود">
-                                    <div class="media-body">
-                                        <h4 class="media-heading">منى محمود</h4>
-                                        <div class="rating">
-                                            <span class="fas fa-star active"></span>
-                                            <span class="fas fa-star active"></span>
-                                            <span class="fas fa-star active"></span>
-                                            <span class="fas fa-star active"></span>
-                                            <span class="fas fa-star "></span>
-                                        </div>
-                                        <p>السعر مرتفع قليلا</p>
-                                    </div>
-                                </div>
-                            </div>
+                        <div class="col-12">
+                            <form id="form-checkout">
+                                <table class="custom-table">
+                                    <thead>
+                                        <tr>
+                                            <th>المنتج</th>
+                                            <th>السعر</th>
+                                            <th>العدد المطلوب</th>
+                                            <th class="hide-on-small">السعر الإجمالي</th>
+                                            <th></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr data-product-info data-product-price="400">
+                                            <td>
+                                                <div class="media custom-media">
+                                                    <img src="images/lacoste_1.jpg" alt="تي شيرت رجالي من لاكوست"
+                                                        class="d-none d-md-block">
+                                                    <div class="media-body">
+                                                        <h4>تي شيرت رجالي من لاكوست</h4>
+                                                        <div class="custom-text-muted">ملابس رجالي</div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>400$</td>
+                                            <td>
+                                                <select name="quantity1"
+                                                    class="form-control custom-form-control quantity"
+                                                    data-product-quantity>
+                                                    <option value="1">1</option>
+                                                    <option value="2">2</option>
+                                                    <option value="3" selected>3</option>
+                                                </select>
+                                            </td>
+                                            <td class="total-price-for-product hide-on-small">1200$</td>
+                                            <td>
+                                                <button class="btn btn-danger custom-btn custom-btn-danger"
+                                                    data-remove-from-cart>
+                                                    <span class="d-none d-md-block">حذف</span>
+                                                    <i class="far fa-trash-alt d-block d-md-none fa-lg"></i>
+                                                </button>
+                                            </td>
+                                        </tr>
+                                        <tr data-product-info data-product-price="300">
+                                            <td>
+                                                <div class="media custom-media">
+                                                    <img src="images/tshirt.jpg" alt="تي شيرت أديداس"
+                                                        class="d-none d-md-block">
+                                                    <div class="media-body">
+                                                        <h4>تي شيرت أديداس</h4>
+                                                        <div class="custom-text-muted">ملابس رجالي</div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>300$</td>
+                                            <td>
+                                                <select name="quantity2"
+                                                    class="form-control custom-form-control quantity"
+                                                    data-product-quantity>
+                                                    <option value="1">1</option>
+                                                    <option value="2">2</option>
+                                                    <option value="3">3</option>
+                                                </select>
+                                            </td>
+                                            <td class="total-price-for-product hide-on-small">300$</td>
+                                            <td>
+                                                <button class="btn btn-danger custom-btn custom-btn-danger"
+                                                    data-remove-from-cart>
+                                                    <span class="d-none d-md-block">حذف</span>
+                                                    <i class="far fa-trash-alt d-block d-md-none fa-lg"></i>
+                                                </button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                    <tfoot>
+                                        <tr>
+                                            <td colspan="5" class="total-price">
+                                                <span class="custom-text-muted">
+                                                    <span class="custom-text-muted">
+                                                        السعر الإجمالي للمنتجات:
+                                                    </span>
+                                                    <span id="total-price-for-all-products">1500</span>
+                                                    دولار
+                                                </span>
+                                            </td>
+                                        </tr>
+                                    </tfoot>
+                                </table>
+                                <button type="submit" class="btn custom-btn-primary2 custom-btn-with-icon">
+                                    <span>
+                                        إكمال عملية الشراء
+                                        <i class="fas fa-dollar-sign"></i>
+                                    </span>
+                                </button>
+                            </form>
                         </div>
                     </div>
                 </div>
-                <!-- End Comments -->
+                <!-- End Cart -->
 
                 <!-- Start Suggestions -->
                 <div class="row suggestions">
@@ -489,7 +359,6 @@
                 </div>
                 <!-- End Suggestions -->
             </div>
-            <!-- End Product -->
         </div>
 
         <!-- Start Footer -->
@@ -547,6 +416,7 @@
             </div>
         </div>
         <!-- End Footer -->
+    </div>
 </body>
 
 </html>
