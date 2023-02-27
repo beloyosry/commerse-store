@@ -9,7 +9,10 @@ import "@fortawesome/fontawesome-free/js/all";
 $(function () {
     $('[data-toggle="tooltip"]').tooltip();
 
-    $(".add-to-cart-btn").click(function () {
+    $(".add-to-cart-btn").on("click", function () {
         alert("تم إضافة المنتج إلى عربة الشراء");
     });
 });
+$("#copyright").text(
+    "جميع الحقوق محفوظة للمتجر سنة " + new Date().getFullYear()
+);
