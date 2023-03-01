@@ -1062,6 +1062,9 @@ MEDIA QUERY
     #form-subscription {
         margin-bottom: 40px;
     }
+        .rating{
+        margin-bottom: 10px;
+    }
 }
 @media (max-width: 767px) {
     #carousel-featured,
