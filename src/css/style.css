@@ -812,6 +812,92 @@ PAYMENT PAGE
 
 /***************************************************************************
 **********************
+SEARCH PAGE
+**********************
+****************************************************************************/
+
+#form-advanced-search {
+    border: 1px solid #ebebeb;
+    padding-bottom: 20px;
+    height: max-content;
+    display: table;
+}
+#form-advanced-search .custom-panel {
+    border: none;
+    padding: 5px;
+}
+.custom-panel .card-header {
+    background-color: transparent;
+    margin-bottom: 15px;
+    padding: 7px 10px 13px;
+}
+.custom-list-group > .list-group-item {
+    border: none;
+    padding: 0 10px 14px 0;
+}
+.custom-list-group > .list-group-item:last-child {
+    padding: 0 10px 0 0;
+}
+#form-advanced-search label {
+    cursor: pointer;
+    font-weight: bold;
+}
+.ui-slider {
+    margin: 25px 0 15px;
+    height: 2px !important;
+}
+.ui-slider .ui-slider-handle {
+    background-color: #f8ad47 !important;
+    border: none !important;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    height: 12px;
+    width: 12px;
+    top: -7px !important;
+}
+.ui-slider .ui-slider-range {
+    border: 1px solid #f8ad47 !important;
+    top: -1px !important;
+}
+.custom-pagination li a {
+    border: 1px solid #ebebeb;
+    width: 32px;
+    height: 32px;
+    line-height: 32px;
+    margin-right: 3px;
+    margin-left: 3px;
+    color: #c2c2c2;
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    display: inline-block;
+    text-align: center;
+}
+.custom-pagination li.active a {
+    background-color: #f8ad47;
+    color: #fff;
+    border-color: #f8ad47;
+}
+.custom-pagination li a:active,
+.custom-pagination li a:focus,
+.custom-pagination li a:hover {
+    color: #ab7731;
+    border-color: #ab7731;
+}
+.custom-pagination {
+    margin: 25px 0;
+}
+#search-results .custom-thumbnail {
+    margin-right: -8px;
+    margin-left: -8px;
+}
+/***************************************************************************
+**********************
 MEDIA QUERY 
 **********************
 ****************************************************************************/
@@ -934,6 +1020,12 @@ MEDIA QUERY
         line-height: 40px;
         font-size: 20px;
     }
+
+    .ui-slider .ui-slider-handle {
+        height: 20px !important;
+        width: 20px !important;
+        top: -10px !important;
+    }
 }
 @media (max-width: 767px) {
     #carousel-featured,
@@ -968,6 +1060,9 @@ MEDIA QUERY
     .hide-on-small {
         display: none;
     }
+    .custom-thumbnail img {
+        height: auto;
+    }
 }
 @media (max-width: 575px) {
     .form-inline .custom-form-control {
@@ -980,6 +1075,9 @@ MEDIA QUERY
 
     #carousel-featured .carousel-item {
         padding: 0px 18px;
+    }
+    .custom-thumbnail img {
+        height: auto;
     }
     #footer #brand-logos .img-container img {
         margin: 5px 15px;
