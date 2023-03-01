@@ -119,7 +119,7 @@
                             <h1 class="custom-heading">عربة الشراء</h1>
                         </div>
                         <div class="col-12">
-                            <form id="form-checkout">
+                            <form id="form-checkout" action="payment.html">
                                 <table class="custom-table">
                                     <thead>
                                         <tr>
@@ -144,6 +144,7 @@
                                             </td>
                                             <td>400$</td>
                                             <td>
+                                                <input name="product1" type="hidden" value="تي شيرت رجالي من لاكوست">
                                                 <select name="quantity1"
                                                     class="form-control custom-form-control quantity"
                                                     data-product-quantity>
@@ -154,7 +155,7 @@
                                             </td>
                                             <td class="total-price-for-product hide-on-small">1200$</td>
                                             <td>
-                                                <button class="btn btn-danger custom-btn custom-btn-danger"
+                                                <button class="btn btn-danger custom-btn custom-btn-danger delete-btn"
                                                     data-remove-from-cart>
                                                     <span class="d-none d-md-block">حذف</span>
                                                     <i class="far fa-trash-alt d-block d-md-none fa-lg"></i>
@@ -174,6 +175,7 @@
                                             </td>
                                             <td>300$</td>
                                             <td>
+                                                <input name="product2" type="hidden" value="تي شيرت أديداس">
                                                 <select name="quantity2"
                                                     class="form-control custom-form-control quantity"
                                                     data-product-quantity>
@@ -182,9 +184,9 @@
                                                     <option value="3">3</option>
                                                 </select>
                                             </td>
-                                            <td class="total-price-for-product hide-on-small">300$</td>
+                                            <td class="total-price-for-product hide-on-small ">300$</td>
                                             <td>
-                                                <button class="btn btn-danger custom-btn custom-btn-danger"
+                                                <button class="btn btn-danger custom-btn custom-btn-danger delete-btn"
                                                     data-remove-from-cart>
                                                     <span class="d-none d-md-block">حذف</span>
                                                     <i class="far fa-trash-alt d-block d-md-none fa-lg"></i>
